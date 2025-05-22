@@ -6,26 +6,14 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven{
+        maven {
             allowInsecureProtocol = true
             url 'https://www.jitpack.io'
         }
     }
-
     dependencies {
         classpath 'com.android.tools.build:gradle:7.3.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven{
-            allowInsecureProtocol = true
-            url 'https://www.jitpack.io'
-        }
     }
 }
 
@@ -33,7 +21,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace = "io.github.fuadreza.imin_printer_example"
+    namespace = "io.github.fuadreza.imin_printer" // Thay bằng package name phù hợp cho thư viện
 
     compileSdkVersion 33
 
@@ -53,9 +41,9 @@ android {
     }
 
     defaultConfig {
-        applicationId = "io.github.fuadreza.imin_printer_example"
         minSdkVersion 23
         multiDexEnabled true
+        // Loại bỏ applicationId vì đây là thư viện
     }
 }
 
