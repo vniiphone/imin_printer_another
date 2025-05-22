@@ -2,7 +2,7 @@ group 'io.github.fuadreza.imin_printer'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.8.21'
+    ext.kotlin_version = '1.9.24'
     repositories {
         google()
         mavenCentral()
@@ -11,9 +11,13 @@ buildscript {
             url 'https://www.jitpack.io'
         }
     }
+//    dependencies {
+//        classpath 'com.android.tools.build:gradle:7.3.0'
+//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+//    }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:8.1.0' // Tương thích với Gradle 8.10.2
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.24" // Phiên bản mới nhất
     }
 }
 
@@ -21,8 +25,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace = "io.github.fuadreza.imin_printer" // Thay bằng package name phù hợp cho thư viện
-
+    namespace 'io.github.fuadreza.imin_printer'
     compileSdkVersion 33
 
     compileOptions {
