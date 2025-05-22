@@ -7,7 +7,6 @@ buildscript {
         google()
         mavenCentral()
         maven {
-            allowInsecureProtocol = true
             url 'https://www.jitpack.io'
         }
     }
@@ -26,7 +25,7 @@ apply plugin: 'kotlin-android'
 
 android {
     namespace = "io.github.fuadreza.imin_printer"
-    compileSdkVersion 33
+    compileSdkVersion 34
 
     compileOptions {
         sourceCompatibility "11"
@@ -34,7 +33,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11' // Đồng bộ với Java 11
     }
 
     sourceSets {
@@ -56,5 +55,5 @@ dependencies {
     implementation files('libs/iminPrinterSDK.jar')
     implementation files('libs/IminLibs1.0.15.jar')
     implementation files('libs/freeimagelibrary.jar')
-    implementation ('com.github.iminsoftware:IminPrinterLibrary:V1.0.0.14')
+    implementation 'com.github.iminsoftware:IminPrinterLibrary:V2.0.0.16' // Cập nhật lên phiên bản mới nhất
 }
