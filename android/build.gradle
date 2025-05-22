@@ -25,12 +25,12 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace 'io.github.fuadreza.imin_printer'
+    namespace = "io.github.fuadreza.imin_printer"
     compileSdkVersion 33
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility "11"
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     kotlinOptions {
@@ -48,11 +48,13 @@ android {
         multiDexEnabled true
         // Loại bỏ applicationId vì đây là thư viện
     }
+    buildToolsVersion '35.0.1'
+    ndkVersion '27.0.12077973'
 }
 
 dependencies {
     implementation files('libs/iminPrinterSDK.jar')
     implementation files('libs/IminLibs1.0.15.jar')
     implementation files('libs/freeimagelibrary.jar')
-    implementation 'com.github.iminsoftware:IminPrinterLibrary:V1.0.0.14'
+    implementation ('com.github.iminsoftware:IminPrinterLibrary:V1.0.0.14')
 }
