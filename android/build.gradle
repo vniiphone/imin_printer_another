@@ -33,6 +33,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace = "io.github.fuadreza.imin_printer_example"
+
     compileSdkVersion 33
 
     compileOptions {
@@ -51,6 +53,7 @@ android {
     }
 
     defaultConfig {
+        applicationId = "io.github.fuadreza.imin_printer_example"
         minSdkVersion 23
         multiDexEnabled true
     }
