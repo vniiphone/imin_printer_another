@@ -6,9 +6,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url 'https://www.jitpack.io'
-        }
+        maven { url 'https://www.jitpack.io' }
     }
 //    dependencies {
 //        classpath 'com.android.tools.build:gradle:7.3.0'
@@ -55,5 +53,6 @@ dependencies {
     implementation files('libs/iminPrinterSDK.jar')
     implementation files('libs/IminLibs1.0.15.jar')
     implementation files('libs/freeimagelibrary.jar')
+    implementation("com.github.iminsoftware:IminPrinterLibrary:V2.0.0.16")
 //    implementation 'com.github.iminsoftware:IminPrinterLibrary:V2.0.0.16' // Cập nhật lên phiên bản mới nhất
 }
