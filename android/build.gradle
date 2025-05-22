@@ -53,6 +53,6 @@ dependencies {
     implementation files('libs/iminPrinterSDK.jar')
     implementation files('libs/IminLibs1.0.15.jar')
     implementation files('libs/freeimagelibrary.jar')
-    implementation("com.github.iminsoftware:IminPrinterLibrary:V2.0.0.16")
+    implementation 'com.github.iminsoftware:IminPrinterLibrary:V2.0.0.16'
 //    implementation 'com.github.iminsoftware:IminPrinterLibrary:V2.0.0.16' // Cập nhật lên phiên bản mới nhất
 }
